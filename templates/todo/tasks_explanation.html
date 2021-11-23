@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" 
+    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+</head>
+<body>
+    <div class="container mt-4">
+        <a class="btn btn-danger" href="{% url 'tasks' %}">Back</a>
+        <div>
+        <br>
+        <h3>Task: </h1>
+        <br>
+        <h5>{{task.title}}</h5>
+        </div>
+        <br>
+        <hr>
+        <div>
+        <h3>Category:</h3>
+        <br>
+        <h5> {{task.category}}</h5></div>
+        <br>
+        <hr>
+        <div>
+        <h3>Deadline:</h3>
+        <br>
+        <h5>{{task.deadline}}</h5></div>
+        <br>
+        <hr>
+        <h3>Explanation: </h3>
+        <br>
+        <div>
+        <h5>{{task.explanation}}</h5>
+        </div>
+    </div>
+</body>
+</html>
+

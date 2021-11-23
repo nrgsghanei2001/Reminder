@@ -6,5 +6,7 @@ urlpatterns = [
     path('', index_page, name='index'),
     path('admin/', admin_page, name='admin'),
     path('categories/', categories_page, name='categories'),
-    path('tasks/', tasks_page, name='tasks'),
+    path('tasks/', TaskList.as_view(), name='tasks'),
+    path('<int:pk>/', TaskDetail.as_view(), name="tasks_explanation"),
+    path('add/task/', add_task_page, name='add_task'),
 ]

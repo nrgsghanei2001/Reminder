@@ -1,9 +1,6 @@
 {% extends './base.html' %}
 {% block accessMenu %}
 <li class="nav-item">
-    <a class="nav-link" href="{% url 'index' %}">index</a>
-</li>
-<li class="nav-item">
     <a class="nav-link" href="{% url 'admin' %}">admin</a>
 </li>
 <li class="nav-item">
@@ -11,6 +8,9 @@
 </li>
 <li class="nav-item">
     <a class="nav-link" href="{% url 'tasks' %}">tasks</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'add_task' %}">add a new task</a>
 </li>
 {% endblock accessMenu %}
 {% block content %}
