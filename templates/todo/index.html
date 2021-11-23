@@ -1,0 +1,18 @@
+{% extends './base.html' %}
+{% block accessMenu %}
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'index' %}">index</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'admin' %}">admin</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'categories' %}">categories</a>
+</li>
+<li class="nav-item">
+    <a class="nav-link" href="{% url 'tasks' %}">tasks</a>
+</li>
+{% endblock accessMenu %}
+{% block content %}
+<h3>index page</h3>
+{% endblock content %}
