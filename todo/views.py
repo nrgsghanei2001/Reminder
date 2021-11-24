@@ -1,3 +1,4 @@
+from django.db.models.base import Model
 from django.http import request
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, TemplateView
@@ -15,8 +16,14 @@ def index_page(request):
 def admin_page(request):
     return render(request)
 
-def categories_page(request):
-    return render(request, 'todo/categories.html')
+# def categories_page(request):
+#     return render(request, 'todo/categories.html')
+class CategoriesList(ListView):
+    model = Category
+    template_name = 'todo/categories.html'
+
+# class CategoriesDetail(DetailView):
+#     model = Task
 
 class TaskList(ListView):
     queryset = Task.objects.order_by("-deadline")

@@ -1,28 +1,13 @@
 from django.db import models
 from django import forms
 
+
 class Category(models.Model):
-    categories = (
-        ("1", "University"),
-        ("2", "Maktab"),
-        ("3", "Usual life"),
-        ("4", "Entertainment"),
-        ("5", "Others"),
-    )
 
-    category = models.CharField(max_length=1, choices=categories, default="1")
+    category = models.CharField(max_length=3, unique=True)
 
-    def __str__(self) -> str:
-        if (self.category == "1"):
-            return "University"
-        elif (self.category == "2"):
-            return "Maktab"
-        elif (self.category == "3"):
-            return "Usual life"
-        elif (self.category == "4"):
-            return "Entertainment"
-        elif (self.category == "5"):
-            return "Others"
+    def __str__(self) :
+        return self.category
 
 
 class Task(models.Model):
