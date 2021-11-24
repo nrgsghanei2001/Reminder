@@ -1,6 +1,13 @@
+from django.http import request
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, TemplateView
 from .models import *
+
+
+# def recent_tasks(request):
+#     recent_task = Task.objects.all()[:3]
+#     return render(request, 'todo/show_recent_tasks.html', {'object_list':recent_task})
+
 
 def index_page(request):
     return render(request, 'todo/index.html')
